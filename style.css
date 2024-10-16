@@ -1,9 +1,18 @@
+:root {
+  --main-font: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --main-background: #629584; /*: rgba(224, 217, 217, 0.874);*/
+  --background-light: #e2f1e7;
+  --darg-border-color: #243642;
+}
+
 body,
 html {
   display: flex;
   flex-direction: row;
   margin: 0;
   width: 100vw;
+  font-family: var(--main-font);
 }
 
 #content {
@@ -11,6 +20,11 @@ html {
   flex-direction: column;
   justify-content: center;
   width: 100vw;
+  background-color: var(--background-light);
+}
+
+form {
+  background-color: var(--main-background);
 }
 
 #banner-image {
@@ -26,6 +40,23 @@ html {
 fieldset {
   display: flex;
   flex-direction: column;
+  border: none;
+}
+
+button {
+  width: 25%;
+  aspect-ratio: 3.5 / 1;
+  border-radius: 5px;
+  background-color: #243642;
+  color: white;
+  padding: 10px;
+  margin: 0;
+  border: none;
+}
+
+#button-holder {
+  background-color: var(--background-light);
+  padding: 5%;
 }
 
 #inputs-left,
@@ -33,5 +64,12 @@ fieldset {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 50%;
+  width: 30%;
+}
+
+#info-text {
+  width: 60%;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 5%;
 }
