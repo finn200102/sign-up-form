@@ -1,0 +1,18 @@
+body,
+html {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  width: 100vw;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+}
+
+#banner-image {
+  height: 100vh;
+}
