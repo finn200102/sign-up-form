@@ -16,3 +16,22 @@ html {
 #banner-image {
   height: 100vh;
 }
+
+#inputs {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+#inputs-left,
+#inputs-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+}

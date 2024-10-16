@@ -13,8 +13,30 @@
       <form action="#" method="get">
         <fieldset>
           <legend>Give me your data!</legend>
-          <div id="inputs-left"></div>
-          <div id="inputs-right"></div>
+          <div id="inputs">
+            <div id="inputs-left">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" placeholder="Bob..." />
+              <label for="email">email</label>
+              <input type="email" id="email" placeholder="bob.bob@mail.com" />
+
+              <label for="password-first">password</label>
+              <input type="password" id="password-first" />
+            </div>
+            <div id="inputs-right">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" placeholder="Bob..." />
+              <label for="phone-number">Phone Number</label>
+              <input
+                type="tel"
+                id="phone-number"
+                placeholder="Enter phone number"
+              />
+
+              <label for="password-second">confirm password</label>
+              <input type="password" id="password-second" />
+            </div>
+          </div>
         </fieldset>
         <button type="submit">Create account</button>
       </form>
