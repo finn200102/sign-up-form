@@ -1,9 +1,9 @@
 :root {
   --main-font: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --main-background: #629584; /*: rgba(224, 217, 217, 0.874);*/
+  --form-background: #629584; /*: rgba(224, 217, 217, 0.874);*/
   --background-light: #e2f1e7;
-  --darg-border-color: #243642;
+  --dark-border-color: #243642;
 }
 
 body,
@@ -24,17 +24,31 @@ html {
 }
 
 form {
-  background-color: var(--main-background);
+  background-color: var(--form-background);
 }
 
 #banner-image {
   height: 100vh;
 }
 
+input {
+  background-color: var(--form-background);
+  color: black;
+  height: 10%;
+  border: 2px solid var(--dark-border-color);
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: black;
+}
+
 #inputs {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 20px;
+  height: 30vh;
 }
 
 fieldset {
@@ -43,20 +57,38 @@ fieldset {
   border: none;
 }
 
+#fieldset-holder {
+  background-color: var(--form-background);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
 button {
   width: 25%;
   aspect-ratio: 3.5 / 1;
   border-radius: 5px;
   background-color: #243642;
   color: white;
-  padding: 10px;
   margin: 0;
   border: none;
+  font-size: 20px;
+}
+
+#login-text {
+  padding: 5%;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(233, 169, 6);
 }
 
 #button-holder {
   background-color: var(--background-light);
-  padding: 5%;
+  padding-left: 50px;
+  padding-top: 30px;
 }
 
 #inputs-left,
@@ -64,7 +96,9 @@ button {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  height: 90%;
   width: 30%;
+  padding: 5%;
 }
 
 #info-text {
@@ -72,4 +106,41 @@ button {
   font-size: 30px;
   font-weight: bold;
   padding: 5%;
+}
+
+input:focus {
+  border-color: blue;
+}
+
+legend {
+  padding: 5%;
+  font-size: 25px;
+}
+
+.image-container {
+  position: relative;
+  width: 50vh;
+}
+
+.image-container > img {
+  position: absolute;
+
+  z-index: -1;
+}
+
+.image-text {
+  position: absolute;
+  width: 100%;
+  background: black;
+  opacity: 0.6;
+  color: white;
+  top: 15rem;
+  text-align: center;
+  font-size: 3em;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-heading {
 }
